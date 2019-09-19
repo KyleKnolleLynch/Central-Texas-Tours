@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Navbar.scss';
 
@@ -8,13 +8,19 @@ const Navbar = () => {
     <div className='navbar bg-dark'>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink exact to='/' activeClassName={Navbar.active}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <NavLink exact to='/about' activeClassName={Navbar.active}>
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to='/tours'>Tours</Link>
+          <NavLink exact to='/tourList' activeClassName={Navbar.active}>
+            Tours
+          </NavLink>
         </li>
       </ul>
     </div>
