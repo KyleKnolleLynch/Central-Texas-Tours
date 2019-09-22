@@ -1,0 +1,14 @@
+@import '../../../main.scss';
+
+
+.tour-list {
+  grid-gap: 4rem;
+ 
+}
+
+@media (max-width: 900px) {
+    .tour-list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem ;
+    }
+}
