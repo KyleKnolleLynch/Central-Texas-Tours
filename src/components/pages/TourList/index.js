@@ -10,10 +10,10 @@ class TourList extends Component {
   };
 
   render() {
-    console.log(this.state.tours);
+    const { tours } = this.state
     return (
       <div className='tour-list grid-4'>
-        {this.state.tours.map(tour => (
+        {tours.map(tour => (
           <Tour key={tour.id} city={tour.city} img={tour.img} tour={tour.tour} info={tour.info} />
         ))}
         

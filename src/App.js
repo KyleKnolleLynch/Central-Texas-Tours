@@ -6,7 +6,7 @@ import About from './components/pages/About/About';
 import TourList from './components/pages/TourList';
 import NotFound from './components/layout/NotFound/NotFound';
 
-import './main.scss';
+import './sass/main.scss';
 
 const App = () => {
   return (

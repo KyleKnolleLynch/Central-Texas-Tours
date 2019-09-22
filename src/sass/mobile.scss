@@ -1,0 +1,68 @@
+@import 'config.scss';
+
+@include mediaXl {
+  .tour-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem 1rem;
+  }
+}
+
+@include mediaLg {
+  .tour-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tour {
+    width: 20rem;
+  }
+}
+
+@include mediaMd {
+  .hide-sm {
+    display: none;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem 1rem;
+  }
+
+  /* Text Styles */
+  .x-large {
+    font-size: 3rem;
+  }
+
+  .large {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: block;
+    text-align: center;
+    ul {
+      justify-content: space-evenly;
+    }
+    a {
+      margin: 0;
+    }
+  }
+
+  .tour {
+    width: 25rem;
+  }
+}
+
+@include mediaSm {
+  .container {
+    padding: 1.5rem 0;
+  }
+  .tour {
+    width: 18rem;
+  }
+}
