@@ -2,7 +2,7 @@
 
 .tour {
   width: 18rem;
-  height: 32rem;
+  height: 34rem;
   margin: 0 auto;
   border: #ccc 1px dotted;
   display: grid;
@@ -15,8 +15,8 @@
     height: 20rem;
     img {
       height: 100%;
-      background-size: no-repeat contain;
       object-fit: cover;
+      object-position: bottom;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
     }
