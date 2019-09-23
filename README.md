@@ -1,5 +1,5 @@
 #  React City Tours Website
 
-*  React
+*  React using hooks and router
 *  Sass
 *  Font Awesome
