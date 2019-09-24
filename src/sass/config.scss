@@ -4,6 +4,8 @@
 $primaryColor: #22909e;
 $darkColor: #333333;
 $lightColor: #f4f4f4;
+$whiteColor: #fff;
+$greyColor: #888;
 $dangerColor: #bb0114;
 $successColor: #15b63a;
 
@@ -17,8 +19,9 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: $whiteColor;
   color: #333;
+  overflow-x: hidden;
 }
 
 a {

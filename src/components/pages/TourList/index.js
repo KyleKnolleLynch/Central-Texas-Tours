@@ -13,10 +13,12 @@ const TourList = () => {
   };
 
   return (
-    <div className='tour-list grid-4'>
-      {tours.map(tour => (
-        <Tour key={tour.id} tour={tour} hideTour={hideTour} />
-      ))}
+    <div className='container'>
+      <div className='tour-list grid-4'>
+        {tours.map(tour => (
+          <Tour key={tour.id} tour={tour} hideTour={hideTour} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@
 }
 
 .large {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -28,6 +28,10 @@
 
 .text-dark {
   color: $darkColor;
+}
+
+.text-white {
+  color: $whiteColor;
 }
 
 .text-success {
@@ -151,7 +155,7 @@
 .btn {
   display: inline-block;
   background: $lightColor;
-  color: #333;
+  color: $darkColor;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -185,7 +189,7 @@
   text-align: center;
   margin: 0.3rem;
   background: $lightColor;
-  color: #333;
+  color: $darkColor;
   border-radius: 5px;
 }
 
@@ -194,7 +198,7 @@
   margin: 1rem 0;
   opacity: 0.9;
   background: $lightColor;
-  color: #333;
+  color: $darkColor;
 }
 
 .btn-primary,
@@ -202,7 +206,7 @@
 .badge-primary,
 .alert-primary {
   background: $primaryColor;
-  color: #fff;
+  color: $whiteColor;
 }
 
 .btn-light,
@@ -210,15 +214,16 @@
 .badge-light,
 .alert-light {
   background: $lightColor;
-  color: #333;
+  color: $darkColor;
 }
+
 
 .btn-dark,
 .bg-dark,
 .badge-dark,
 .alert-dark {
   background: $darkColor;
-  color: #fff;
+  color: $whiteColor;
 }
 
 .btn-danger,
@@ -226,7 +231,7 @@
 .badge-danger,
 .alert-danger {
   background: $dangerColor;
-  color: #fff;
+  color: $whiteColor;
 }
 
 .btn-success,
@@ -234,15 +239,15 @@
 .badge-success,
 .alert-success {
   background: $successColor;
-  color: #fff;
+  color: $whiteColor;
 }
 
 .btn-white,
 .bg-white,
 .badge-white,
 .alert-white {
-  background: #fff;
-  color: #333;
+  background: $whiteColor;
+  color: $darkColor;
   border: #ccc solid 1px;
 }
 
@@ -271,7 +276,7 @@ input {
 .form-text {
   display: block;
   margin-top: 0.3rem;
-  color: #888;
+  color: $greyColor;
 }
 
 input[type='text'],

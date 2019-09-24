@@ -53,6 +53,12 @@
     }
   }
 
+  .banner {
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
   .tour {
     width: 25rem;
   }
@@ -61,6 +67,15 @@
 @include mediaSm {
   .container {
     padding: 1.5rem 0;
+  }
+  .hero {
+    h1 {
+      padding: 0 2rem;
+    }
+  }
+  .banner {
+    justify-content: space-evenly;
+    font-size: 0.8rem;
   }
   .tour {
     width: 18rem;

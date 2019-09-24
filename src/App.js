@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar/Navbar';
 import Home from './components/pages/Home/Home';
-import About from './components/pages/About/About';
+import Bookings from './components/pages/Bookings/Bookings';
 import TourList from './components/pages/TourList';
 import NotFound from './components/layout/NotFound/NotFound';
 
@@ -12,14 +12,12 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <div className='container'>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/tourList' component={TourList} />
-          <Route component={NotFound} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/bookings' component={Bookings} />
+        <Route exact path='/tourList' component={TourList} />
+        <Route component={NotFound} />
+      </Switch>
     </Router>
   );
 };

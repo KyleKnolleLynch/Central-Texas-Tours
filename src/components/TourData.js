@@ -1,25 +1,25 @@
 export const TourData = [
   {
     id: 1,
-    city: 'new york',
-    img: './images/newYork.jpg',
-    tour: 'New York Iconic Sites Tour',
+    city: 'Downtown Austin',
+    img: './images/topTours/skyline.jpg',
+    tour: 'Walk Downtown Austin',
     info:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptas ipsa delectus quos, eius at.'
   },
   {
     id: 2,
-    city: 'san francisco',
-    img: './images/sanFrancisco.jpg',
-    tour: 'San Francisco Day Tour',
+    city: 'Hamilton\'s Pool',
+    img: './images/topTours/hamilton.jpg',
+    tour: 'Day Trip to Hamilton\'s Pool',
     info:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptas ipsa delectus quos, eius at.'
   },
   {
     id: 3,
-    city: 'new orleans',
-    img: './images/newOrleans.jpg',
-    tour: 'French Quarter and Jazz Tour',
+    city: 'Austin Capitol',
+    img: './images/topTours/capitol.jpg',
+    tour: 'Capitol Building Tour',
     info:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptas ipsa delectus quos, eius at.'
   },

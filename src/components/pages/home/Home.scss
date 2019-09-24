@@ -1,0 +1,98 @@
+@import '../../../sass/main.scss';
+
+.hero {
+  background: url('/images/hero.jpg') center / cover no-repeat;
+  width: 100vw;
+  height: 60vh;
+}
+
+.banner {
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+  i {
+    font-size: 2rem;
+  }
+}
+
+.wrapping {
+  max-width: 1100px;
+  margin: auto;
+  h2 {
+    display: inline-block;
+    margin: 0 0 0.7rem 2.5rem;
+  }
+}
+
+.top-tours {
+  min-height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 1.5rem;
+  padding: 0 2rem;
+  div {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: $whiteColor;
+    &:nth-child(1) {
+      background: url('/images/topTours/skyline.jpg') center / cover no-repeat;
+    }
+    &:nth-child(2) {
+      background: url('/images/topTours/bluebonnets.jpg') center / cover
+        no-repeat;
+    }
+    &:nth-child(3) {
+      background: url('/images/topTours/bikes.jpg') center / cover no-repeat;
+    }
+    &:nth-child(4) {
+      background: url('/images/topTours/capitol.jpg') center / cover no-repeat;
+    }
+    &:nth-child(5) {
+      background: url('/images/topTours/hamilton.jpg') center / cover no-repeat;
+    }
+    &:nth-child(6) {
+      background: url('/images/topTours/cows.jpg') center / cover no-repeat;
+    }
+    &:nth-child(7) {
+      background: url('/images/topTours/art.jpg') center / cover
+        no-repeat;
+    }
+    &:nth-child(8) {
+      background: url('/images/topTours/ship.jpg') center / cover no-repeat;
+    }
+    &:nth-child(9) {
+      background: url('/images/sanAntonio.jpg') center / cover no-repeat;
+    }
+    &:nth-child(10) {
+      background: url('/images/topTours/cafe.jpg') center / cover no-repeat;
+    }
+  }
+}
+
+.banner-secondary {
+  width: 100vw;
+  height: 12rem;
+  margin-top: 5rem;
+  background: $greyColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-secondary {
+  background: url('/images/cityEvening.jpg') center / cover no-repeat;
+  width: 100vw;
+  height: 60vh;
+}
+
+.footer {
+  width: 100vw;
+  height: 40vh;
+
+}
