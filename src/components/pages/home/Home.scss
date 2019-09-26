@@ -28,15 +28,16 @@
 .top-tours {
   min-height: 40vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   grid-gap: 1.5rem;
   padding: 0 2rem;
   div {
     height: 10rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
+    h2 {
+      margin: auto;
+    }
     color: $whiteColor;
     &:nth-child(1) {
       background: url('/images/topTours/skyline.jpg') center / cover no-repeat;
@@ -58,8 +59,7 @@
       background: url('/images/topTours/cows.jpg') center / cover no-repeat;
     }
     &:nth-child(7) {
-      background: url('/images/topTours/art.jpg') center / cover
-        no-repeat;
+      background: url('/images/topTours/art.jpg') center / cover no-repeat;
     }
     &:nth-child(8) {
       background: url('/images/topTours/ship.jpg') center / cover no-repeat;
@@ -94,5 +94,4 @@
 .footer {
   width: 100vw;
   height: 40vh;
-
 }

@@ -1,69 +1,79 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import FormUserDetails from './FormUserDetails';
+import React, { Component } from 'react';
+import FormPersonalDetails from './FormPersonalDetails';
 import FormTourDetails from './FormTourDetails';
 import Confirm from './Confirm';
+import Success from './Success';
 
 import './Bookings.scss';
 
-const Bookings = () => {
-  const [step, setStep] = useState(1);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [tour, setTour] = useState('');
-  const [date, setDate] = useState('');
-
-  const nextStep = () => {
-    setStep(step + 1);
+class Bookings extends Component {
+  state = {
+    step: 1,
+    firstName: '',
+    lastName: '',
+    email: '',
+    tour: '',
+    date: '',
+    message: ''
   };
 
-  const backStep = () => {
-    setStep(step - 1);
+  nextStep = () => {
+    const { step } = this.state;
+    this.setState({ step: step + 1 });
   };
 
-  const submitValue = () => {
-    const formDetails = {
-      'First Name': firstName,
-      'Last Name': lastName,
-      Email: email,
-      Tour: tour,
-      Date: date
-    };
-    console.log(formDetails);
+  backStep = () => {
+    const { step } = this.state;
+    this.setState({ step: step - 1 });
   };
 
-  switch (step) {
-    case 1:
-      return <FormUserDetails nextStep={nextStep} submitValue={submitValue} />;
-    case 2:
-      return (
-        <FormTourDetails
-          nextStep={nextStep}
-          backStep={backStep}
-          submitValue={submitValue}
-        />
-      );
-    case 3:
-      return (
-        <Confirm
-          nextStep={nextStep}
-          backStep={backStep}
-          submitValue={submitValue}
-        />
-      );
-    case 4:
-      return <h1>Success</h1>;
-    default:
-      return (
-        <h1>
-          Return to Bookings{' '}
-          <NavLink exact to='/'>
-            Here
-          </NavLink>
-        </h1>
-      );
+  handleChange = input => e => {
+    this.setState({ [input]: e.target.value });
+  };
+
+  render() {
+    const { step } = this.state;
+    const { firstName, lastName, email, tour, date, message } = this.state;
+    const values = { firstName, lastName, email, tour, date, message };
+
+    switch (step) {
+      case 1:
+        return (
+          <FormPersonalDetails
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 2:
+        return (
+          <FormTourDetails
+            nextStep={this.nextStep}
+            backStep={this.backStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 3:
+        return (
+          <Confirm
+            nextStep={this.nextStep}
+            backStep={this.backStep}
+            values={values}
+          />
+        );
+      case 4:
+        return <Success values={values} />;
+      default:
+        return (
+          <FormPersonalDetails
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+    }
   }
-};
+}
 
 export default Bookings;

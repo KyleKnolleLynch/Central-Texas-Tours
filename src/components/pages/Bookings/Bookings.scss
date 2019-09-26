@@ -3,4 +3,9 @@
 .booking-main {
   max-width: 500px;
   margin: auto;
+  .text-area::after {
+    content: ' (Optional)';
+    font-size: 0.8rem;
+    font-style: italic;
+  }
 }

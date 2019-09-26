@@ -1,63 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const FormTourDetails = (props) => {
-  const [tour, setTour] = useState('');
-  const [date, setDate] = useState('');
+const FormTourDetails = props => {
+  const forward = e => {
+    e.preventDefault();
+    props.nextStep();
+  };
 
-const advance = e => {
-  e.preventDefault();
-  props.nextStep();
-}
+  const reverse = e => {
+    e.preventDefault();
+    props.backStep();
+  };
 
-const reverse = e => {
-  e.preventDefault();
-  props.backStep();
-}
-  
+  const { handleChange } = props;
   return (
-    <div className='booking-main text-center'>
-      <h1 className='my-2'>
-        <span className='text-primary'>Tour</span> Bookings
-      </h1>
-      <form>
-        {/* <input
-          className='form-text'
-          type='text'
-          placeholder='First Name'
-          onChange={e => setFirstName(e.target.value)}
-        />
-        <input
-          className='form-text'
-          type='text'
-          placeholder='Last Name'
-          onChange={e => setLastName(e.target.value)}
-        />
-        <input
-          className='form-text'
-          type='email'
-          placeholder='Email'
-          onChange={e => setEmail(e.target.value)}
-        /> */}
-        <input
-          className='form-text'
-          type='text'
-          placeholder='Tour'
-          onChange={e => setTour(e.target.value)}
-        />
-        <input
-          className='form-text'
-          type='date'
-          placeholder='Date'
-          onChange={e => setDate(e.target.value)}
-        />
-        <button className='btn btn-danger' type='submit' onClick={reverse}>
-          Go Back
-        </button>
-        <button className='btn btn-primary' type='submit' onClick={advance}>
-          Continue
-        </button>
-      </form>
-    </div>
+    <form className='booking-main text-center'>
+      <h1 className='text-primary my-2 '>Booking</h1>
+      <h2 className='m'>Enter Tour Info</h2>
+      <h3 className='text-left'>Choose Tour:</h3>
+      <input
+        type='text'
+        placeholder='Enter Tour Title'
+        className='list-li form-text'
+        onChange={handleChange('tour')}
+      />
+      <h3 className='text-left'>Choose Date:</h3>
+      <input
+        type='date'
+        placeholder='Enter Date'
+        className='list-li form-text'
+        onChange={handleChange('date')}
+      />
+      <h3 className='text-left text-area'>Detailed Message: </h3>
+      <textarea
+        type='text'
+        placeholder='Enter Detailed Message'
+        className='list-li form-text'
+        onChange={handleChange('message')}
+      />
+      <button className='btn btn-danger my-1' onClick={reverse}>
+        Go Back
+      </button>
+      <button className='btn btn-primary my-1' onClick={forward}>
+        Continue
+      </button>
+    </form>
   );
 };
 
