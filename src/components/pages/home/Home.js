@@ -35,7 +35,7 @@ const Home = () => {
         <h2>Popular Tours</h2>
         <div className='top-tours'>
           <div>
-            <h2>Austin Downtown</h2>
+            <h2> Austin Downtown</h2>
           </div>
           <div>
             <h2>Bluebonnets</h2>
@@ -83,28 +83,60 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='footer'>
+      <div className='footer grid-3'>
         <div className='foot-icons fa-2x'>
-          <a href='#!'><i className='fab fa-pinterest-square'></i></a>
-          <a href='#!'><i className='fab fa-twitter-square'></i></a>
-          <a href='#!'><i className='fab fa-facebook-square'></i></a>
-          <a href='#!'><i className='fab fa-instagram'></i></a>
-          <a href='#!'><i className='fab fa-youtube-square'></i></a>
+          <a href='#!'>
+            <i className='fab fa-pinterest-square'></i>
+          </a>
+          <a href='#!'>
+            <i className='fab fa-twitter-square'></i>
+          </a>
+          <a href='#!'>
+            <i className='fab fa-facebook-square'></i>
+          </a>
+          <a href='#!'>
+            <i className='fab fa-instagram'></i>
+          </a>
+          <a href='#!'>
+            <i className='fab fa-youtube-square'></i>
+          </a>
         </div>
 
         <div className='foot-info m grid-2'>
           <div>
-            <h5 className='my-2'><a href='#!'>Help Center</a></h5>
-            <h5 className='my-2'><a href='#!'>Group Services</a></h5>
-            <h5 className='my-2'><a href='#!'>Privacy Policy</a></h5>
-            <h5 className='my-2'><a href='#!'>About Us</a></h5>
+            <h5 className='my-2'>
+              <a href='#!'>Help Center</a>
+            </h5>
+            <h5 className='my-2'>
+              <a href='#!'>Group Services</a>
+            </h5>
+            <h5 className='my-2'>
+              <a href='#!'>Privacy Policy</a>
+            </h5>
+            <h5 className='my-2'>
+              <a href='#!'>About Us</a>
+            </h5>
           </div>
           <div>
-            <h5 className='my-2'><a href='#!'>Site Map</a></h5>
-            <h5 className='my-2'><a href='#!'>Tour Agents</a></h5>
-            <h5 className='my-2'><a href='#!'>Account Status</a></h5>
-            <h5 className='my-2'><a href='#!'>Distibution Programs</a></h5>
+            <h5 className='my-2'>
+              <a href='#!'>Site Map</a>
+            </h5>
+            <h5 className='my-2'>
+              <a href='#!'>Tour Agents</a>
+            </h5>
+            <h5 className='my-2'>
+              <a href='#!'>Account Status</a>
+            </h5>
+            <h5 className='my-2'>
+              <a href='#!'>Distibution Programs</a>
+            </h5>
           </div>
+        </div>
+        <div>
+          <h2 className='text-white'>
+            <span>Central Texas</span> Tours &nbsp;
+          </h2>
+          <p> &copy; CTT 2019</p>
         </div>
       </div>
     </div>

@@ -14,6 +14,9 @@
   .tour {
     width: 20rem;
   }
+  .footer {
+    height: 100%;
+  }
 }
 
 @include mediaMd {
@@ -25,7 +28,6 @@
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
-    grid-gap: 4rem 1rem;
   }
 
   /* Text Styles */
@@ -62,6 +64,23 @@
   .tour {
     width: 25rem;
   }
+
+  .footer {
+    padding: 1rem;
+    .foot-icons {
+      grid-column: span 3;
+    }
+    .foot-info {
+      grid-template-columns: 1fr 1fr;
+      grid-column: span 3;
+      text-align: center;
+      border: none;
+    }
+    :nth-child(3) {
+      grid-column: 1 / 3;
+      justify-self: center;
+    }
+  }
 }
 
 @include mediaSm {
@@ -76,6 +95,7 @@
   .banner {
     justify-content: space-evenly;
     font-size: 0.8rem;
+    height: 13vh
   }
   .tour {
     width: 18rem;

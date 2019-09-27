@@ -7,10 +7,13 @@
 }
 
 .banner {
-  height: 10vh;
+  height: 12vh;
   display: flex;
   justify-content: space-around;
   margin-bottom: 4rem;
+  div {
+    margin: auto 0;
+  }
   i {
     font-size: 2rem;
   }
@@ -31,45 +34,47 @@
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   grid-gap: 1.5rem;
   padding: 0 2rem;
-  div {
+     div {
     height: 10rem;
     display: flex;
     text-align: center;
+    color: $whiteColor;
     h2 {
       margin: auto;
     }
-    color: $whiteColor;
-    &:nth-child(1) {
-      background: url('/images/topTours/skyline.jpg') center / cover no-repeat;
-    }
-    &:nth-child(2) {
-      background: url('/images/topTours/bluebonnets.jpg') center / cover
-        no-repeat;
-    }
-    &:nth-child(3) {
-      background: url('/images/topTours/bikes.jpg') center / cover no-repeat;
-    }
-    &:nth-child(4) {
-      background: url('/images/topTours/capitol.jpg') center / cover no-repeat;
-    }
-    &:nth-child(5) {
-      background: url('/images/topTours/hamilton.jpg') center / cover no-repeat;
-    }
-    &:nth-child(6) {
-      background: url('/images/topTours/cows.jpg') center / cover no-repeat;
-    }
-    &:nth-child(7) {
-      background: url('/images/topTours/art.jpg') center / cover no-repeat;
-    }
-    &:nth-child(8) {
-      background: url('/images/topTours/ship.jpg') center / cover no-repeat;
-    }
-    &:nth-child(9) {
-      background: url('/images/sanAntonio.jpg') center / cover no-repeat;
-    }
-    &:nth-child(10) {
-      background: url('/images/topTours/cafe.jpg') center / cover no-repeat;
-    }
+   
+      &:nth-child(1) {
+        background: url('/images/topTours/skyline.jpg') center / cover no-repeat;
+      }
+      &:nth-child(2) {
+        background: url('/images/topTours/bluebonnets.jpg') center / cover
+          no-repeat;
+      }
+      &:nth-child(3) {
+        background: url('/images/topTours/bikes.jpg') center / cover no-repeat;
+      }
+      &:nth-child(4) {
+        background: url('/images/topTours/capitol.jpg') center / cover no-repeat;
+      }
+      &:nth-child(5) {
+        background: url('/images/topTours/hamilton.jpg') center / cover
+          no-repeat;
+      }
+      &:nth-child(6) {
+        background: url('/images/topTours/cows.jpg') center / cover no-repeat;
+      }
+      &:nth-child(7) {
+        background: url('/images/topTours/art.jpg') center / cover no-repeat;
+      }
+      &:nth-child(8) {
+        background: url('/images/topTours/ship.jpg') center / cover no-repeat;
+      }
+      &:nth-child(9) {
+        background: url('/images/sanAntonio.jpg') center / cover no-repeat;
+      }
+      &:nth-child(10) {
+        background: url('/images/topTours/cafe.jpg') center / cover no-repeat;
+      }
   }
 }
 
@@ -100,17 +105,14 @@
 
 .footer {
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
   background: #17646e;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
   .foot-icons {
     align-self: center;
     justify-self: center;
     a :hover {
-     opacity: 0.8;
+      opacity: 0.8;
     }
     i {
       margin: 0 0.4rem;
@@ -125,7 +127,18 @@
     grid-column: 2 / 4;
     border-bottom: 2px solid $whiteColor;
     div {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  :nth-child(3) {
+    grid-column: 2 / 4;
+    display: inline-flex;
+    margin-bottom: 1rem;
+    p {
+      align-self: center;
+    }
+    span {
+      color: #2fb2c4;
     }
   }
 }
