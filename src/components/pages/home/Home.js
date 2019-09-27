@@ -79,10 +79,34 @@ const Home = () => {
           <i className='far fa-star'></i> <i className='far fa-star'></i>{' '}
           <i className='far fa-star'></i>
           <h3>Rated Five Stars</h3>
+          <h6>by customer cencus</h6>
         </div>
       </div>
 
-      <div className='footer badge-primary'></div>
+      <div className='footer'>
+        <div className='foot-icons fa-2x'>
+          <a href='#!'><i className='fab fa-pinterest-square'></i></a>
+          <a href='#!'><i className='fab fa-twitter-square'></i></a>
+          <a href='#!'><i className='fab fa-facebook-square'></i></a>
+          <a href='#!'><i className='fab fa-instagram'></i></a>
+          <a href='#!'><i className='fab fa-youtube-square'></i></a>
+        </div>
+
+        <div className='foot-info m grid-2'>
+          <div>
+            <h5 className='my-2'><a href='#!'>Help Center</a></h5>
+            <h5 className='my-2'><a href='#!'>Group Services</a></h5>
+            <h5 className='my-2'><a href='#!'>Privacy Policy</a></h5>
+            <h5 className='my-2'><a href='#!'>About Us</a></h5>
+          </div>
+          <div>
+            <h5 className='my-2'><a href='#!'>Site Map</a></h5>
+            <h5 className='my-2'><a href='#!'>Tour Agents</a></h5>
+            <h5 className='my-2'><a href='#!'>Account Status</a></h5>
+            <h5 className='my-2'><a href='#!'>Distibution Programs</a></h5>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

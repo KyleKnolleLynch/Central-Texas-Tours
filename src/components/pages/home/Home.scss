@@ -89,9 +89,43 @@
   background: url('/images/cityEvening.jpg') center / cover no-repeat;
   width: 100vw;
   height: 60vh;
+  position: relative;
+  div {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    text-align: center;
+  }
 }
 
 .footer {
   width: 100vw;
   height: 40vh;
+  background: #17646e;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  .foot-icons {
+    align-self: center;
+    justify-self: center;
+    a :hover {
+     opacity: 0.8;
+    }
+    i {
+      margin: 0 0.4rem;
+      padding: 6px;
+      border-radius: 5px;
+      color: $lightColor;
+      background: $primaryColor;
+      font-size: 1.5rem;
+    }
+  }
+  .foot-info {
+    grid-column: 2 / 4;
+    border-bottom: 2px solid $whiteColor;
+    div {
+      margin-bottom: 2rem;
+    }
+  }
 }

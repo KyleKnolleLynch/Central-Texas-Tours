@@ -25,12 +25,12 @@ body {
 }
 
 a {
-  color: $primaryColor;
+  color: $darkColor;
   text-decoration: none;
 }
 
 a:hover {
-  color: #666;
+  color: $primaryColor;
 }
 
 ul {
