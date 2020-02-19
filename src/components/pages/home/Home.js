@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import TopTours from '../../layout/TopTours/TopTours';
 
 import './Home.scss';
 
 const Home = () => {
   return (
-    <div>
+    <Fragment>
       <div className='hero'>
         <div className='container large'>
           <h1>
@@ -31,41 +32,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='wrapping'>
-        <h2>Popular Tours</h2>
-        <div className='top-tours'>
-          <div>
-            <h2> Austin Downtown</h2>
-          </div>
-          <div>
-            <h2>Bluebonnets</h2>
-          </div>
-          <div>
-            <h2>Bicycle Austin</h2>
-          </div>
-          <div>
-            <h2>Capitol</h2>
-          </div>
-          <div>
-            <h2>Hamilton's Pool</h2>
-          </div>
-          <div>
-            <h2>Ranches</h2>
-          </div>
-          <div>
-            <h2>Street Art</h2>
-          </div>
-          <div>
-            <h2>Battleship Texas</h2>
-          </div>
-          <div>
-            <h2>San Antonio</h2>
-          </div>
-          <div>
-            <h2>Hip Cafes</h2>
-          </div>
-        </div>
-      </div>
+      {/* <div className='wrapping'> */}
+       
+        <TopTours />
+      {/* </div> */}
 
       <div className='banner-secondary text-white'>
         <i className='far fa-clock fa-4x my'></i>
@@ -79,7 +49,7 @@ const Home = () => {
           <i className='far fa-star'></i> <i className='far fa-star'></i>{' '}
           <i className='far fa-star'></i>
           <h3>Rated Five Stars</h3>
-          <h6>by customer cencus</h6>
+          <h6>by customer census</h6>
         </div>
       </div>
 
@@ -102,7 +72,7 @@ const Home = () => {
           </a>
         </div>
 
-        <div className='foot-info m grid-2'>
+        <div className='foot-info grid-2'>
           <div>
             <h5 className='my-2'>
               <a href='#!'>Help Center</a>
@@ -139,7 +109,7 @@ const Home = () => {
           <p> &copy; CTT 2019</p>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

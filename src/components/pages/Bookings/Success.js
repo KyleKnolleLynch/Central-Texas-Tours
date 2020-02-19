@@ -19,13 +19,13 @@ const Success = ({ values: { firstName, lastName, tour, date } }) => {
       <p>
         Back to{' '}
         <NavLink exact to='/'>
-          Home
+          <strong className='text-primary' style={{fontSize: '1.4rem'}}>Home</strong>
         </NavLink>
       </p>
       <p>
         Go to{' '}
         <NavLink exact to='/tourList'>
-          Tours
+         <strong className='text-primary' style={{fontSize: '1.4rem'}}>Tours</strong>
         </NavLink>
       </p>
     </div>

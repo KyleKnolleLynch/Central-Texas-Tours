@@ -55,20 +55,25 @@
     }
   }
 
+  /* Home */
+
   .banner {
-    i {
-      font-size: 1.5rem;
-    }
+    height: 16vh;
+  }
+
+  .wrapping {
+    text-align: center;
   }
 
   .tour {
     width: 25rem;
   }
-
+  /* Footer */
   .footer {
     padding: 1rem;
     .foot-icons {
       grid-column: span 3;
+      padding: 0;
     }
     .foot-info {
       grid-template-columns: 1fr 1fr;
@@ -95,7 +100,19 @@
   .banner {
     justify-content: space-evenly;
     font-size: 0.8rem;
-    height: 13vh
+    i {
+      font-size: 1.7rem;
+      padding-bottom: 0.3rem;
+    }
+    .list {
+      h4 {
+        line-height: 1.2;
+        padding-bottom: 0.1rem;
+      }
+      h6 {
+        line-height: 1.4;
+      }
+    }
   }
   .tour {
     width: 18rem;

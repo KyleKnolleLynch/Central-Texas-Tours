@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap');
 
 /* Global Styles */
 $primaryColor: #22909e;
-$darkColor: #333333;
+$darkColor: #333;
 $lightColor: #f4f4f4;
 $whiteColor: #fff;
 $greyColor: #888;
 $dangerColor: #bb0114;
 $successColor: #15b63a;
+$scrollbarBG: #444;
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
 
 * {
   box-sizing: border-box;
@@ -15,13 +21,30 @@ $successColor: #15b63a;
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
 body {
+  height: 100%;
   font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: $whiteColor;
-  color: #333;
-  overflow-x: hidden;
+  color: $darkColor;
+  scrollbar-width: thin;
+  scrollbar-color: #000 $scrollbarBG;
+  overflow: scroll;
+}
+
+body::-webkit-scrollbar-track {
+  background: $scrollbarBG;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 7px;
+  border: 3px solid $scrollbarBG;
 }
 
 a {
@@ -31,6 +54,7 @@ a {
 
 a:hover {
   color: $primaryColor;
+  opacity: 0.8;
 }
 
 ul {
@@ -45,12 +69,11 @@ img {
 .container {
   max-width: 1600px;
   margin: auto;
-  overflow: hidden;
   padding: 4rem 2rem;
 }
 
 @mixin mediaSm {
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 500px) {
     @content;
   }
 }
