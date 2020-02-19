@@ -31,11 +31,8 @@ const Home = () => {
           <h6 className='list-li'>Industry Leading Pricing</h6>
         </div>
       </div>
-
-      {/* <div className='wrapping'> */}
        
         <TopTours />
-      {/* </div> */}
 
       <div className='banner-secondary text-white'>
         <i className='far fa-clock fa-4x my'></i>
@@ -106,7 +103,7 @@ const Home = () => {
           <h2 className='text-white'>
             <span>Central Texas</span> Tours &nbsp;
           </h2>
-          <p> &copy; CTT 2019</p>
+          <p> &copy; Kyle Lynch 2020</p>
         </div>
       </div>
     </Fragment>

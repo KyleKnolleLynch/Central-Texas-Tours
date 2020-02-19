@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const Success = ({ values: { firstName, lastName, tour, date } }) => {
@@ -31,5 +32,14 @@ const Success = ({ values: { firstName, lastName, tour, date } }) => {
     </div>
   );
 };
+
+Success.propTypes = {
+  values: PropTypes.shape({
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    tour: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired
+  })
+}
 
 export default Success;

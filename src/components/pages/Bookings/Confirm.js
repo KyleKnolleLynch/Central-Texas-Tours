@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Confirm = ({
   values: { firstName, lastName, email, tour, date, message },
@@ -14,7 +15,7 @@ const Confirm = ({
     e.preventDefault();
     backStep();
   };
-  
+
   const fixedDate = new Date(date + 'CST').toLocaleDateString();
 
   return (
@@ -47,6 +48,19 @@ const Confirm = ({
       </button>
     </div>
   );
+};
+
+Confirm.propTypes = {
+  values: PropTypes.shape({
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    tour: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    message: PropTypes.string
+  }),
+  nextStep: PropTypes.func.isRequired,
+  backStep: PropTypes.func.isRequired
 };
 
 export default Confirm;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import FormPersonalDetails from './FormPersonalDetails';
 import FormTourDetails from './FormTourDetails';
 import Confirm from './Confirm';
@@ -6,74 +6,66 @@ import Success from './Success';
 
 import './Bookings.scss';
 
-class Bookings extends Component {
-  state = {
-    step: 1,
+const Bookings = () => {
+  const [step, setStep] = useState(1);
+  const [values, setValues] = useState({
     firstName: '',
     lastName: '',
     email: '',
     tour: '',
     date: '',
     message: ''
+  });
+
+  const nextStep = () => {
+    setStep(step + 1);
   };
 
-  nextStep = () => {
-    const { step } = this.state;
-    this.setState({ step: step + 1 });
+  const backStep = () => {
+    setStep(step - 1);
   };
 
-  backStep = () => {
-    const { step } = this.state;
-    this.setState({ step: step - 1 });
+  const handleChange = e => {
+    const {name, value} = e.target;
+    setValues({ ...values, [name]: value });
   };
+  // const handleChange = input => e => {
+  //   setValues({ ...values, [input]: e.target.value });
+  // };
 
-  handleChange = input => e => {
-    this.setState({ [input]: e.target.value });
-  };
-
-  render() {
-    const { step } = this.state;
-    const { firstName, lastName, email, tour, date, message } = this.state;
-    const values = { firstName, lastName, email, tour, date, message };
-
-    switch (step) {
-      case 1:
-        return (
-          <FormPersonalDetails
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        );
-      case 2:
-        return (
-          <FormTourDetails
-            nextStep={this.nextStep}
-            backStep={this.backStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        );
-      case 3:
-        return (
-          <Confirm
-            nextStep={this.nextStep}
-            backStep={this.backStep}
-            values={values}
-          />
-        );
-      case 4:
-        return <Success values={values} />;
-      default:
-        return (
-          <FormPersonalDetails
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        );
-    }
+  switch (step) {
+    case 1:
+      return (
+        <FormPersonalDetails
+          nextStep={nextStep}
+          handleChange={handleChange}
+          values={values}
+        />
+      );
+    case 2:
+      return (
+        <FormTourDetails
+          nextStep={nextStep}
+          backStep={backStep}
+          handleChange={handleChange}
+          values={values}
+        />
+      );
+    case 3:
+      return (
+        <Confirm nextStep={nextStep} backStep={backStep} values={values} />
+      );
+    case 4:
+      return <Success values={values} />;
+    default:
+      return (
+        <FormPersonalDetails
+          nextStep={nextStep}
+          handleChange={handleChange}
+          values={values}
+        />
+      );
   }
-}
+};
 
 export default Bookings;

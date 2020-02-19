@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Tour from '../Tour/Tour';
-import { TourData } from '../../TourData';
+import { TourData } from '../../data/TourData';
 
 import './TourList.scss';
 
@@ -13,12 +13,10 @@ const TourList = () => {
   };
 
   return (
-    <div className='container'>
-      <div className='tour-list grid-4'>
-        {tours.map(tour => (
-          <Tour key={tour.id} tour={tour} hideTour={hideTour} />
-        ))}
-      </div>
+    <div className='tour-list'>
+      {tours.map(tour => (
+        <Tour key={tour.id} tour={tour} hideTour={hideTour} />
+      ))}
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink exact to='/bookings' activeClassName={Navbar.active}>
-            Bookings
+            Booking
           </NavLink>
         </li>
         <li>

@@ -1,19 +1,9 @@
 @import 'config.scss';
 
 @include mediaXl {
-  .tour-list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4rem 1rem;
-  }
 }
 
 @include mediaLg {
-  .tour-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .tour {
-    width: 20rem;
-  }
   .footer {
     height: 100%;
   }
@@ -65,9 +55,6 @@
     text-align: center;
   }
 
-  .tour {
-    width: 25rem;
-  }
   /* Footer */
   .footer {
     padding: 1rem;
@@ -113,8 +100,5 @@
         line-height: 1.4;
       }
     }
-  }
-  .tour {
-    width: 18rem;
   }
 }

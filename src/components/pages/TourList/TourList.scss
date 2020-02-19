@@ -1,7 +1,10 @@
 @import '../../../sass/main.scss';
 
-
 .tour-list {
-width: 70vw;
-margin: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 24rem));
+  grid-gap: 3rem 2rem;
+  justify-content: center;
+  padding: 4rem 2rem;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopTourData } from './TopToursData';
+import { TopTourData } from '../../data/TopToursData';
 
 import './TopTours.scss';
 

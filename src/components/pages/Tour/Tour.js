@@ -37,7 +37,7 @@ const Tour = ({ tour: { id, img, city, tour, info }, hideTour }) => {
   );
 };
 
-Tour.protoTypes = {
+Tour.propTypes = {
   hideTour: PropTypes.func.isRequired,
   tour: PropTypes.object.isRequired
 };
