@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-const FormTourDetails = ({ nextStep, backStep, handleChange }) => {
+const FormTourDetails = ({ nextStep, backStep, handleChange, errors}) => {
   const forward = e => {
     e.preventDefault();
     nextStep();
@@ -25,6 +24,7 @@ const FormTourDetails = ({ nextStep, backStep, handleChange }) => {
         className='list-li form-text'
         onChange={handleChange}
       />
+      {errors.tour && <p className='alert alert-danger'>{errors.tour}</p>}
       <h3 className='text-left'>Choose Date:</h3>
       <input
         type='date'
@@ -33,6 +33,7 @@ const FormTourDetails = ({ nextStep, backStep, handleChange }) => {
         className='list-li form-text'
         onChange={handleChange}
       />
+      {errors.date && <p className='alert alert-danger'>{errors.date}</p>}
       <h3 className='text-left text-area'>Detailed Message: </h3>
       <textarea
         type='text'
@@ -55,6 +56,6 @@ FormTourDetails.propTypes = {
   nextStep: PropTypes.func.isRequired,
   backStep: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired
-}
+};
 
 export default FormTourDetails;

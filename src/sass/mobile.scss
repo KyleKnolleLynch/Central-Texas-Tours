@@ -85,16 +85,17 @@
     }
   }
   .banner {
+    height: 17vh;
     justify-content: space-evenly;
     font-size: 0.8rem;
     i {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       padding-bottom: 0.3rem;
     }
     .list {
       h4 {
-        line-height: 1.2;
-        padding-bottom: 0.1rem;
+        line-height: 1.1;
+        padding-bottom: 0.2rem;
       }
       h6 {
         line-height: 1.4;

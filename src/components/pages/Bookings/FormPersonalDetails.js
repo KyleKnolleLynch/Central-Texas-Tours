@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-const FormPersonalDetails = ({ nextStep, handleChange }) => {
+const FormPersonalDetails = ({ nextStep, handleChange, errors }) => {
   const forward = e => {
     e.preventDefault();
     nextStep();
@@ -20,6 +19,9 @@ const FormPersonalDetails = ({ nextStep, handleChange }) => {
         className='list-li form-text'
         onChange={handleChange}
       />
+      {errors.firstName && (
+        <p className='alert alert-danger'>{errors.firstName}</p>
+      )}
       <h3 className='text-left'>Last Name:</h3>
       <input
         type='text'
@@ -28,6 +30,9 @@ const FormPersonalDetails = ({ nextStep, handleChange }) => {
         className='list-li form-text'
         onChange={handleChange}
       />
+      {errors.lastName && (
+        <p className='alert alert-danger'>{errors.lastName}</p>
+      )}
       <h3 className='text-left'>Email:</h3>
       <input
         type='email'
@@ -36,6 +41,7 @@ const FormPersonalDetails = ({ nextStep, handleChange }) => {
         className='list-li form-text'
         onChange={handleChange}
       />
+      {errors.email && <p className='alert alert-danger'>{errors.email}</p>}
       <button className='btn btn-primary my-1' onClick={forward}>
         Continue
       </button>
@@ -46,6 +52,6 @@ const FormPersonalDetails = ({ nextStep, handleChange }) => {
 FormPersonalDetails.propTypes = {
   nextStep: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired
-}
+};
 
 export default FormPersonalDetails;

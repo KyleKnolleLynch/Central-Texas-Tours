@@ -3,14 +3,9 @@ import PropTypes from 'prop-types';
 
 const Confirm = ({
   values: { firstName, lastName, email, tour, date, message },
-  nextStep,
-  backStep
+  backStep,
+  handleSubmit
 }) => {
-  const forward = e => {
-    e.preventDefault();
-    nextStep();
-  };
-
   const reverse = e => {
     e.preventDefault();
     backStep();
@@ -19,7 +14,7 @@ const Confirm = ({
   const fixedDate = new Date(date + 'CST').toLocaleDateString();
 
   return (
-    <div className='booking-main text-center'>
+    <form className='booking-main text-center' onSubmit={handleSubmit}>
       <h1 className='my-2'>Please Confirm Info is Correct</h1>
       <h2 className='list-li'>
         First Name: <span className='text-primary'>{firstName}</span>
@@ -39,14 +34,13 @@ const Confirm = ({
       <h3 className='list-li'>
         Message: <span className='text-primary'>{message}</span>
       </h3>
-
       <button className='btn btn-danger my-1' onClick={reverse}>
         Go Back
       </button>
-      <button className='btn btn-primary my-1' onClick={forward}>
+      <button className='btn btn-primary my-1' type='submit'>
         Confirm
       </button>
-    </div>
+    </form>
   );
 };
 
@@ -59,8 +53,8 @@ Confirm.propTypes = {
     date: PropTypes.string.isRequired,
     message: PropTypes.string
   }),
-  nextStep: PropTypes.func.isRequired,
-  backStep: PropTypes.func.isRequired
+  backStep: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
 
 export default Confirm;

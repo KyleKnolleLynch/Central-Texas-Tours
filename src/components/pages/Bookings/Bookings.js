@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useForm from './useForm';
+import validate from './validateForm';
 import FormPersonalDetails from './FormPersonalDetails';
 import FormTourDetails from './FormTourDetails';
 import Confirm from './Confirm';
@@ -7,31 +9,22 @@ import Success from './Success';
 import './Bookings.scss';
 
 const Bookings = () => {
-  const [step, setStep] = useState(1);
-  const [values, setValues] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    tour: '',
-    date: '',
-    message: ''
-  });
+  const {
+    step,
+    values,
+    nextStep,
+    backStep,
+    handleChange,
+    handleSubmit,
+    errors
+  } = useForm(
+    submit,
+    validate
+  );
 
-  const nextStep = () => {
-    setStep(step + 1);
-  };
-
-  const backStep = () => {
-    setStep(step - 1);
-  };
-
-  const handleChange = e => {
-    const {name, value} = e.target;
-    setValues({ ...values, [name]: value });
-  };
-  // const handleChange = input => e => {
-  //   setValues({ ...values, [input]: e.target.value });
-  // };
+  function submit() {
+    console.log('form submitted!');
+  }
 
   switch (step) {
     case 1:
@@ -39,7 +32,7 @@ const Bookings = () => {
         <FormPersonalDetails
           nextStep={nextStep}
           handleChange={handleChange}
-          values={values}
+          errors={errors}
         />
       );
     case 2:
@@ -48,12 +41,17 @@ const Bookings = () => {
           nextStep={nextStep}
           backStep={backStep}
           handleChange={handleChange}
-          values={values}
+          errors={errors}
+
         />
       );
     case 3:
       return (
-        <Confirm nextStep={nextStep} backStep={backStep} values={values} />
+        <Confirm
+          backStep={backStep}
+          values={values}
+          handleSubmit={handleSubmit}
+        />
       );
     case 4:
       return <Success values={values} />;
@@ -62,7 +60,7 @@ const Bookings = () => {
         <FormPersonalDetails
           nextStep={nextStep}
           handleChange={handleChange}
-          values={values}
+          errors={errors}
         />
       );
   }
