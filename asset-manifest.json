@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-City-Tours/static/css/main.77b53a60.chunk.css",
+    "main.css": "/React-City-Tours/static/css/main.0a7b178a.chunk.css",
     "main.js": "/React-City-Tours/static/js/main.64f0c75d.chunk.js",
     "main.js.map": "/React-City-Tours/static/js/main.64f0c75d.chunk.js.map",
     "runtime-main.js": "/React-City-Tours/static/js/runtime-main.c1ec9297.js",
@@ -8,15 +8,15 @@
     "static/js/2.28aadf8c.chunk.js": "/React-City-Tours/static/js/2.28aadf8c.chunk.js",
     "static/js/2.28aadf8c.chunk.js.map": "/React-City-Tours/static/js/2.28aadf8c.chunk.js.map",
     "index.html": "/React-City-Tours/index.html",
-    "precache-manifest.9b685743964eaded1a5e6341bcbd269e.js": "/React-City-Tours/precache-manifest.9b685743964eaded1a5e6341bcbd269e.js",
+    "precache-manifest.9b911578478f2cb90018819724b26dc5.js": "/React-City-Tours/precache-manifest.9b911578478f2cb90018819724b26dc5.js",
     "service-worker.js": "/React-City-Tours/service-worker.js",
-    "static/css/main.77b53a60.chunk.css.map": "/React-City-Tours/static/css/main.77b53a60.chunk.css.map",
+    "static/css/main.0a7b178a.chunk.css.map": "/React-City-Tours/static/css/main.0a7b178a.chunk.css.map",
     "static/js/2.28aadf8c.chunk.js.LICENSE.txt": "/React-City-Tours/static/js/2.28aadf8c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c1ec9297.js",
     "static/js/2.28aadf8c.chunk.js",
-    "static/css/main.77b53a60.chunk.css",
+    "static/css/main.0a7b178a.chunk.css",
     "static/js/main.64f0c75d.chunk.js"
   ]
 }
