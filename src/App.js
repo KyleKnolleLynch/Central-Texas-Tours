@@ -10,7 +10,7 @@ import './sass/main.scss';
 
 const App = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Navbar />
       <Switch>
         <Route exact path='/' component={Home} />
