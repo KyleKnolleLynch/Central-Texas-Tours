@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7302092fef71eefcd595e33873e6316c",
+    "revision": "07b5cd0255b00626c903b6412cca7b62",
     "url": "/React-City-Tours/index.html"
   },
   {
-    "revision": "a34f946de6df18790ca1",
-    "url": "/React-City-Tours/static/css/main.0a7b178a.chunk.css"
+    "revision": "3a4a0cb8d4d696a52f59",
+    "url": "/React-City-Tours/static/css/main.6a16bfb1.chunk.css"
   },
   {
     "revision": "ef16d6c6591db46174f4",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-City-Tours/static/js/2.28aadf8c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a34f946de6df18790ca1",
+    "revision": "3a4a0cb8d4d696a52f59",
     "url": "/React-City-Tours/static/js/main.64f0c75d.chunk.js"
   },
   {
