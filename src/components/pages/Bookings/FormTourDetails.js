@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FormTourDetails = ({ nextStep, backStep, handleChange, errors}) => {
+const FormTourDetails = ({ stepTwo, backStep, handleChange, errors }) => {
   const forward = e => {
     e.preventDefault();
-    nextStep();
+    stepTwo();
   };
 
   const reverse = e => {
@@ -21,7 +21,7 @@ const FormTourDetails = ({ nextStep, backStep, handleChange, errors}) => {
         type='text'
         name='tour'
         placeholder='Enter Tour Title'
-        className='list-li form-text'
+        className={`list-li form-text ${errors.tour && 'inputError'}`}
         onChange={handleChange}
       />
       {errors.tour && <p className='alert alert-danger'>{errors.tour}</p>}
@@ -30,7 +30,7 @@ const FormTourDetails = ({ nextStep, backStep, handleChange, errors}) => {
         type='date'
         name='date'
         placeholder='Enter Date'
-        className='list-li form-text'
+        className={`list-li form-text ${errors.date && 'inputError'}`}
         onChange={handleChange}
       />
       {errors.date && <p className='alert alert-danger'>{errors.date}</p>}
@@ -53,9 +53,10 @@ const FormTourDetails = ({ nextStep, backStep, handleChange, errors}) => {
 };
 
 FormTourDetails.propTypes = {
-  nextStep: PropTypes.func.isRequired,
+  stepTwo: PropTypes.func.isRequired,
   backStep: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired,
+  errors: PropTypes.object
 };
 
 export default FormTourDetails;

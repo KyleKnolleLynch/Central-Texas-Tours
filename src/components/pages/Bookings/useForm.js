@@ -1,28 +1,27 @@
 import { useState, useEffect } from 'react';
 
-const useForm = (callback, validate) => {
+const useForm = (callback, initialValues = {}, validate) => {
+  const [values, setValues] = useState(initialValues);
   const [step, setStep] = useState(1);
-  const [values, setValues] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    tour: '',
-    date: '',
-    message: ''
-  });
   const [errors, setErrors] = useState({});
   const [progress, setProgress] = useState(false);
 
   useEffect(() => {
-    if (Object.keys(errors).length === 0 && progress) {
+    if (progress) {
       setErrors(validate(values));
+      setProgress(false);
     }
-  }, [errors, progress, validate, values]);
+  }, [errors, progress, validate, values, step]);
 
-  const nextStep = () => {
-    setErrors(validate(values));
+  const stepOne = () => {
     setProgress(true);
     Object.keys(errors).length <= 2 && setStep(step + 1);
+  };
+
+  const stepTwo = () => {
+    setProgress(true);
+    Object.keys(errors).length > 2 && setStep(step - 1);
+    Object.keys(errors).length === 0 && setStep(step + 1);
   };
 
   const backStep = () => {
@@ -37,17 +36,18 @@ const useForm = (callback, validate) => {
   const handleSubmit = e => {
     e.preventDefault();
     setStep(step + 1);
-    if (Object.keys(errors).length === 0 && progress) {
+    if (Object.keys(errors).length === 0) {
       callback();
     }
-   
+
     setProgress(false);
   };
 
   return {
     step,
     values,
-    nextStep,
+    stepOne,
+    stepTwo,
     backStep,
     handleChange,
     handleSubmit,

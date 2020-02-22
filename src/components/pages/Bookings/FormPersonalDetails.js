@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FormPersonalDetails = ({ nextStep, handleChange, errors }) => {
+const FormPersonalDetails = ({ stepOne, handleChange, errors }) => {
   const forward = e => {
     e.preventDefault();
-    nextStep();
+    stepOne();
   };
 
   return (
@@ -16,7 +16,7 @@ const FormPersonalDetails = ({ nextStep, handleChange, errors }) => {
         type='text'
         name='firstName'
         placeholder='Enter First Name'
-        className='list-li form-text'
+        className={`list-li form-text ${errors.firstName && 'inputError'}`}
         onChange={handleChange}
       />
       {errors.firstName && (
@@ -27,7 +27,7 @@ const FormPersonalDetails = ({ nextStep, handleChange, errors }) => {
         type='text'
         name='lastName'
         placeholder='Enter Last Name'
-        className='list-li form-text'
+        className={`list-li form-text ${errors.lastName && 'inputError'}`}
         onChange={handleChange}
       />
       {errors.lastName && (
@@ -38,7 +38,7 @@ const FormPersonalDetails = ({ nextStep, handleChange, errors }) => {
         type='email'
         name='email'
         placeholder='Enter Email'
-        className='list-li form-text'
+        className={`list-li form-text ${errors.email && 'inputError'}`}
         onChange={handleChange}
       />
       {errors.email && <p className='alert alert-danger'>{errors.email}</p>}
@@ -50,8 +50,9 @@ const FormPersonalDetails = ({ nextStep, handleChange, errors }) => {
 };
 
 FormPersonalDetails.propTypes = {
-  nextStep: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired
+  stepOne: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  errors: PropTypes.object
 };
 
 export default FormPersonalDetails;

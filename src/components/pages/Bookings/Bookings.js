@@ -12,13 +12,15 @@ const Bookings = () => {
   const {
     step,
     values,
-    nextStep,
+    stepOne,
+    stepTwo,
     backStep,
     handleChange,
     handleSubmit,
     errors
   } = useForm(
     submit,
+    { firstName: '', lastName: '', email: '', tour: '', date: '', message: '' },
     validate
   );
 
@@ -30,7 +32,7 @@ const Bookings = () => {
     case 1:
       return (
         <FormPersonalDetails
-          nextStep={nextStep}
+          stepOne={stepOne}
           handleChange={handleChange}
           errors={errors}
         />
@@ -38,11 +40,10 @@ const Bookings = () => {
     case 2:
       return (
         <FormTourDetails
-          nextStep={nextStep}
+          stepTwo={stepTwo}
           backStep={backStep}
           handleChange={handleChange}
           errors={errors}
-
         />
       );
     case 3:
@@ -58,7 +59,7 @@ const Bookings = () => {
     default:
       return (
         <FormPersonalDetails
-          nextStep={nextStep}
+          stepOne={stepOne}
           handleChange={handleChange}
           errors={errors}
         />
