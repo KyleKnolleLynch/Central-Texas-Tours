@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/React-City-Tours/static/css/main.3f6b489a.chunk.css",
-    "main.js": "/React-City-Tours/static/js/main.eded2cbc.chunk.js",
-    "main.js.map": "/React-City-Tours/static/js/main.eded2cbc.chunk.js.map",
-    "runtime-main.js": "/React-City-Tours/static/js/runtime-main.c1ec9297.js",
-    "runtime-main.js.map": "/React-City-Tours/static/js/runtime-main.c1ec9297.js.map",
-    "static/js/2.28aadf8c.chunk.js": "/React-City-Tours/static/js/2.28aadf8c.chunk.js",
-    "static/js/2.28aadf8c.chunk.js.map": "/React-City-Tours/static/js/2.28aadf8c.chunk.js.map",
-    "index.html": "/React-City-Tours/index.html",
-    "precache-manifest.f23bdd2cbe2139dca6267076a83ddddd.js": "/React-City-Tours/precache-manifest.f23bdd2cbe2139dca6267076a83ddddd.js",
-    "service-worker.js": "/React-City-Tours/service-worker.js",
-    "static/css/main.3f6b489a.chunk.css.map": "/React-City-Tours/static/css/main.3f6b489a.chunk.css.map",
-    "static/js/2.28aadf8c.chunk.js.LICENSE.txt": "/React-City-Tours/static/js/2.28aadf8c.chunk.js.LICENSE.txt"
+    "main.css": "/React-City-Tours/index.html/static/css/main.3f6b489a.chunk.css",
+    "main.js": "/React-City-Tours/index.html/static/js/main.eded2cbc.chunk.js",
+    "main.js.map": "/React-City-Tours/index.html/static/js/main.eded2cbc.chunk.js.map",
+    "runtime-main.js": "/React-City-Tours/index.html/static/js/runtime-main.d54e73f1.js",
+    "runtime-main.js.map": "/React-City-Tours/index.html/static/js/runtime-main.d54e73f1.js.map",
+    "static/js/2.28aadf8c.chunk.js": "/React-City-Tours/index.html/static/js/2.28aadf8c.chunk.js",
+    "static/js/2.28aadf8c.chunk.js.map": "/React-City-Tours/index.html/static/js/2.28aadf8c.chunk.js.map",
+    "index.html": "/React-City-Tours/index.html/index.html",
+    "precache-manifest.eb6529b4f73a6abd7cc9f5ce3df76297.js": "/React-City-Tours/index.html/precache-manifest.eb6529b4f73a6abd7cc9f5ce3df76297.js",
+    "service-worker.js": "/React-City-Tours/index.html/service-worker.js",
+    "static/css/main.3f6b489a.chunk.css.map": "/React-City-Tours/index.html/static/css/main.3f6b489a.chunk.css.map",
+    "static/js/2.28aadf8c.chunk.js.LICENSE.txt": "/React-City-Tours/index.html/static/js/2.28aadf8c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c1ec9297.js",
+    "static/js/runtime-main.d54e73f1.js",
     "static/js/2.28aadf8c.chunk.js",
     "static/css/main.3f6b489a.chunk.css",
     "static/js/main.eded2cbc.chunk.js"
