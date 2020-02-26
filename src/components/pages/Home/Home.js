@@ -7,11 +7,9 @@ const Home = () => {
   return (
     <Fragment>
       <div className='hero'>
-        <div className='container large'>
-          <h1>
-            <span className='text-primary'>Central Texas</span> Tours
-          </h1>
-        </div>
+        <h1 className='container'>
+          <span className='text-primary'>Central Texas</span> Tours
+        </h1>
       </div>
 
       <div className='banner bg-primary'>
@@ -31,11 +29,11 @@ const Home = () => {
           <h6 className='list-li'>Industry Leading Pricing</h6>
         </div>
       </div>
-       
-        <TopTours />
+
+      <TopTours />
 
       <div className='banner-secondary text-white'>
-        <i className='far fa-clock fa-4x my'></i>
+        <i className='far fa-clock fa-3x'></i>
         <h2>Cost Free Cancellation</h2>
         <p>Cancel within 24 hours and pay nothing.</p>
       </div>
@@ -53,19 +51,19 @@ const Home = () => {
       <div className='footer grid-3'>
         <div className='foot-icons fa-2x'>
           <a href='#!'>
-            <i className='fab fa-pinterest-square'></i>
+            <i className='fab fa-pinterest-square box-shadow'></i>
           </a>
           <a href='#!'>
-            <i className='fab fa-twitter-square'></i>
+            <i className='fab fa-twitter-square box-shadow'></i>
           </a>
           <a href='#!'>
-            <i className='fab fa-facebook-square'></i>
+            <i className='fab fa-facebook-square box-shadow'></i>
           </a>
           <a href='#!'>
-            <i className='fab fa-instagram'></i>
+            <i className='fab fa-instagram box-shadow'></i>
           </a>
           <a href='#!'>
-            <i className='fab fa-youtube-square'></i>
+            <i className='fab fa-youtube-square box-shadow'></i>
           </a>
         </div>
 

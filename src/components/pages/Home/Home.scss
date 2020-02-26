@@ -4,6 +4,9 @@
   background: url('../../../images/hero.jpg') center / cover no-repeat;
   width: 100vw;
   height: 60vh;
+  h1 {
+    font-size: 3.6rem;
+  }
 }
 
 .banner {
@@ -25,7 +28,7 @@
 
 .banner-secondary {
   width: 100vw;
-  height: 12rem;
+  height: 17vh;
   margin-top: 5rem;
   background: $greyColor;
   display: flex;
@@ -33,6 +36,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  i {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .hero-secondary {
@@ -51,11 +57,11 @@
 .footer {
   width: 100vw;
   height: 50vh;
-  background: #17646e;
+  padding: 2rem;
+  background: $secondaryColor;
   .foot-icons {
     align-self: center;
     justify-self: center;
-    padding-left: 2rem;
     i {
       margin: 0 0.4rem;
       padding: 6px;
@@ -67,8 +73,13 @@
   }
   .foot-info {
     grid-column: 2 / 4;
+    align-content: center;
     border-bottom: 2px solid $whiteColor;
     div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       margin-bottom: 1rem;
     }
   }
@@ -80,7 +91,7 @@
       align-self: center;
     }
     span {
-      color: #2fb2c4;
+      color: $primaryColor;
     }
   }
 }

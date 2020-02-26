@@ -24,7 +24,7 @@ const FormTourDetails = ({ stepTwo, backStep, handleChange, errors }) => {
         className={`list-li form-text ${errors.tour && 'inputError'}`}
         onChange={handleChange}
       />
-      {errors.tour && <p className='alert alert-danger'>{errors.tour}</p>}
+      {errors.tour && <p className='alert'>{errors.tour}</p>}
       <h3 className='text-left'>Choose Date:</h3>
       <input
         type='date'
@@ -33,7 +33,7 @@ const FormTourDetails = ({ stepTwo, backStep, handleChange, errors }) => {
         className={`list-li form-text ${errors.date && 'inputError'}`}
         onChange={handleChange}
       />
-      {errors.date && <p className='alert alert-danger'>{errors.date}</p>}
+      {errors.date && <p className='alert'>{errors.date}</p>}
       <h3 className='text-left text-area'>Detailed Message: </h3>
       <textarea
         type='text'

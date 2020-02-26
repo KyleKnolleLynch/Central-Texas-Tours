@@ -20,7 +20,7 @@ const FormPersonalDetails = ({ stepOne, handleChange, errors }) => {
         onChange={handleChange}
       />
       {errors.firstName && (
-        <p className='alert alert-danger'>{errors.firstName}</p>
+        <p className='alert'>{errors.firstName}</p>
       )}
       <h3 className='text-left'>Last Name:</h3>
       <input
@@ -31,7 +31,7 @@ const FormPersonalDetails = ({ stepOne, handleChange, errors }) => {
         onChange={handleChange}
       />
       {errors.lastName && (
-        <p className='alert alert-danger'>{errors.lastName}</p>
+        <p className='alert'>{errors.lastName}</p>
       )}
       <h3 className='text-left'>Email:</h3>
       <input
@@ -41,7 +41,7 @@ const FormPersonalDetails = ({ stepOne, handleChange, errors }) => {
         className={`list-li form-text ${errors.email && 'inputError'}`}
         onChange={handleChange}
       />
-      {errors.email && <p className='alert alert-danger'>{errors.email}</p>}
+      {errors.email && <p className='alert'>{errors.email}</p>}
       <button className='btn btn-primary my-1' onClick={forward}>
         Continue
       </button>

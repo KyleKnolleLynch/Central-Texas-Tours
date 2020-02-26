@@ -11,7 +11,7 @@ const Tour = ({ tour: { id, img, city, tour, info }, hideTour }) => {
   };
 
   return (
-    <div className='tour'>
+    <div className='tour box-shadow'>
       <div className='img-div'>
         <img src={img} alt='tour' />
         <span

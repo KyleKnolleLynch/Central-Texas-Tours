@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap');
 
 /* Global Styles */
-$primaryColor: #22909e;
+// $primaryColor: #22909e;
+$primaryColor: #00a79d;
+$secondaryColor: #007065;
 $darkColor: #333;
 $lightColor: #f4f4f4;
 $whiteColor: #fff;
@@ -34,7 +36,7 @@ body {
   color: $darkColor;
   scrollbar-width: thin;
   scrollbar-color: #000 $scrollbarBG;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 body::-webkit-scrollbar-track {
@@ -48,13 +50,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 a {
-  color: $darkColor;
+  color: $lightColor;
   text-decoration: none;
 }
 
 a:hover {
   color: $primaryColor;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 ul {
