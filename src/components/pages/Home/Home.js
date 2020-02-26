@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <Fragment>
       <div className='hero'>
-        <h1 className='container'>
-          <span className='text-primary'>Central Texas</span> Tours
+        <h1 className='container text-primary'>
+          Central Texas <span className='text-dark'>Tours</span>
         </h1>
       </div>
 
@@ -98,10 +98,10 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <h2 className='text-white'>
-            <span>Central Texas</span> Tours &nbsp;
+          <h2 className='text-primary'>
+            Central Texas <span className='text-white'>Tours</span>
           </h2>
-          <p> &copy; Kyle Lynch 2020</p>
+          <p>&copy; Kyle Lynch 2020</p>
         </div>
       </div>
     </Fragment>

@@ -32,18 +32,6 @@
     font-size: 1rem;
   }
 
-  /* Navbar */
-  .navbar {
-    display: block;
-    text-align: center;
-    ul {
-      justify-content: space-evenly;
-    }
-    a {
-      margin: 0;
-    }
-  }
-
   /* Home */
 
   .hero h1 {
@@ -84,6 +72,10 @@
 @include mediaSm {
   .container {
     padding: 1.5rem 0;
+  }
+
+  .navbar {
+    font-size: 0.8rem;
   }
   .hero {
     h1 {
