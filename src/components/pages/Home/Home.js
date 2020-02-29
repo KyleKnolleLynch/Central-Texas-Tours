@@ -33,7 +33,7 @@ const Home = () => {
       <TopTours />
 
       <div className='banner-secondary text-white'>
-        <i className='far fa-clock fa-3x'></i>
+        <i className='far fa-clock fa-2x'></i>
         <h2>Cost Free Cancellation</h2>
         <p>Cancel within 24 hours and pay nothing.</p>
       </div>

@@ -28,7 +28,7 @@
 
 .banner-secondary {
   width: 100vw;
-  height: 17vh;
+  height: 14vh;
   margin-top: 5rem;
   background: $greyColor;
   display: flex;
@@ -36,9 +36,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  i {
-    margin-bottom: 0.5rem;
-  }
 }
 
 .hero-secondary {
@@ -91,6 +88,7 @@
       padding-right: 1rem;
     }
     p {
+      color: #000;
       align-self: center;
     }
   }
