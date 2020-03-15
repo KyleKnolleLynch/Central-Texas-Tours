@@ -1,8 +1,6 @@
 import React from 'react';
 import { TopTourData } from '../../data/TopToursData';
 
-import './TopTours.scss';
-
 const TopTours = () => {
   return (
     <div className='top-tours-wrapper'>

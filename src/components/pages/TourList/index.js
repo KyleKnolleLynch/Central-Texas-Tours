@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Tour from '../Tour/Tour';
 import { TourData } from '../../data/TourData';
 
-import './TourList.scss';
-
 const TourList = () => {
   const [tours, setTours] = useState(TourData);
 

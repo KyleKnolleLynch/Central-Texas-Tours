@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './Tour.scss';
-
 const Tour = ({ tour: { id, img, city, tour, info }, hideTour }) => {
   const [showMore, setShowMore] = useState(false);
 

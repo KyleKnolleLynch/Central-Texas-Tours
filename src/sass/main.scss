@@ -1,4 +1,10 @@
-@import 'config.scss';
+@import 'config';
+@import '../components/layout/Navbar/Navbar';
+@import '../components/layout/TopTours/TopTours';
+@import '../components/pages/Bookings/Bookings';
+@import '../components/pages/Home/Home';
+@import '../components/pages/Tour/Tour';
+@import '../components/pages/TourList/TourList';
 
 /* Text Styles*/
 .x-large {
@@ -85,52 +91,38 @@
 .p {
   padding: 0.5rem;
 }
-.p-1 {
-  padding: 1rem;
-}
-.p-2 {
-  padding: 2rem;
-}
-.p-3 {
-  padding: 3rem;
-}
+
 .py {
   padding: 0.5rem 0;
-}
-.py-1 {
-  padding: 1rem 0;
-}
-.py-2 {
-  padding: 2rem 0;
-}
-.py-3 {
-  padding: 3rem 0;
 }
 
 /* Margin */
 .m {
   margin: 0.5rem;
 }
-.m-1 {
-  margin: 1rem;
-}
-.m-2 {
-  margin: 2rem;
-}
-.m-3 {
-  margin: 3rem;
-}
+
 .my {
   margin: 0.5rem 0;
 }
-.my-1 {
-  margin: 1rem 0;
-}
-.my-2 {
-  margin: 2rem 0;
-}
-.my-3 {
-  margin: 3rem 0;
+
+$spaceamounts: (1, 2, 3);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  .my-#{$space} {
+    margin: #{space}rem 0;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
 }
 
 /* Grid */
@@ -216,7 +208,6 @@
   background: $lightColor;
   color: $darkColor;
 }
-
 
 .btn-dark,
 .bg-dark,
@@ -324,4 +315,4 @@ table th {
   transition: opacity 1000ms ease-in;
 }
 
-@import 'mobile.scss';
+@import 'mobile';

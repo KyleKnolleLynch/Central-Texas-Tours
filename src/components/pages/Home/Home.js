@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import TopTours from '../../layout/TopTours/TopTours';
 
-import './Home.scss';
-
 const Home = () => {
   return (
     <Fragment>

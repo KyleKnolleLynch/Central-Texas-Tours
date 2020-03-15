@@ -6,7 +6,7 @@ import Bookings from './components/pages/Bookings/Bookings';
 import TourList from './components/pages/TourList';
 import NotFound from './components/layout/NotFound/NotFound';
 
-import './sass/main.scss';
+import './css/main.css';
 
 const App = () => {
   return (

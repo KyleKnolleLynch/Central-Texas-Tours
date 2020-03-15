@@ -6,8 +6,6 @@ import FormTourDetails from './FormTourDetails';
 import Confirm from './Confirm';
 import Success from './Success';
 
-import './Bookings.scss';
-
 const Bookings = () => {
   const {
     step,
