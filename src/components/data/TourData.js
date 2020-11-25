@@ -1,7 +1,7 @@
-import tourImg1 from '../../images/topTours/skyline.jpg';
-import tourImg2 from '../../images/topTours/hamilton.jpg';
-import tourImg3 from '../../images/topTours/capitol.jpg';
-import tourImg4 from '../../images/sanAntonio.jpg';
+import tourImg1 from '../../images/topTours/skyline.webp';
+import tourImg2 from '../../images/topTours/hamilton.webp';
+import tourImg3 from '../../images/topTours/capitol.webp';
+import tourImg4 from '../../images/sanAntonio.webp';
 
 export const TourData = [
   {

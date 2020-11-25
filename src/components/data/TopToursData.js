@@ -1,18 +1,18 @@
-import img1 from '../../images/topTours/skyline.jpg';
-import img2 from '../../images/topTours/bluebonnets.jpg';
-import img3 from '../../images/topTours/bikes.jpg';
-import img4 from '../../images/topTours/capitol.jpg';
-import img5 from '../../images/topTours/hamilton.jpg';
-import img6 from '../../images/topTours/cows.jpg';
-import img7 from '../../images/topTours/art.jpg';
-import img8 from '../../images/topTours/ship.jpg';
-import img9 from '../../images/sanAntonio.jpg';
-import img10 from '../../images/topTours/cafe.jpg';
+import img1 from '../../images/topTours/skyline.webp';
+import img2 from '../../images/topTours/bluebonnets.webp';
+import img3 from '../../images/topTours/bikes.webp';
+import img4 from '../../images/topTours/capitol.webp';
+import img5 from '../../images/topTours/hamilton.webp';
+import img6 from '../../images/topTours/cows.webp';
+import img7 from '../../images/topTours/art.webp';
+import img8 from '../../images/topTours/ship.webp';
+import img9 from '../../images/sanAntonio.webp';
+import img10 from '../../images/topTours/cafe.webp';
 
 export const TopTourData = [
   {
     id: 100,
-    title: 'Austin Downtown',
+    title: 'Downtown Austin',
     img: img1
   },
   {

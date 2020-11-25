@@ -1,6 +1,6 @@
 .top-tours-wrapper {
   width: 100vw;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   > h2 {
     padding: 0 0 0.7rem 2.5rem;
@@ -23,7 +23,10 @@
     position: relative;
     h2 {
       margin: auto;
+      padding: 0 0.3rem;
+      border-radius: 0.3rem;
       font-weight: 400;
+      background: rgba(0,0,0,0.4);
       z-index: 1;
     }
 
